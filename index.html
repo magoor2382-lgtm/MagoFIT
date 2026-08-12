@@ -1,32 +1,1036 @@
-{
-  "name": "MagoFIT - Nutrición Inteligente",
-  "short_name": "MagoFIT",
-  "description": "Contador de calorías y seguimiento nutricional con escaneo de fotos y códigos de barras.",
-  "start_url": "./index.html",
-  "scope": "./",
-  "display": "standalone",
-  "orientation": "any",
-  "background_color": "#14121F",
-  "theme_color": "#7C3AED",
-  "lang": "es",
-  "icons": [
-    {
-      "src": "data:image/png;base64,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",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "data:image/png;base64,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",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "data:image/png;base64,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",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>MagoFIT — Nutrición Inteligente</title>
+<meta name="description" content="Contador de calorías con IA: escanea tus platos con la cámara o el código de barras.">
+
+<!-- ===================== PWA: instalación en pantalla de inicio ===================== -->
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#7C3AED">
+<!-- iOS: permite modo standalone (sin barra de Safari) al agregar a inicio -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MagoFIT">
+<!-- Ícono incrustado directamente en el código (data URI) para no depender de una carpeta de imágenes -->
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+
+<!-- ===================== Tipografías ===================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- ===================== Tailwind CSS (Play CDN) ===================== -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['"Inter"', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+        colors: {
+          ink: {
+            950: '#0F0D1A',
+            900: '#14121F',
+            800: '#1E1B2E',
+            700: '#262238',
+            600: '#332D4A',
+          },
+          mist: {
+            50: '#F7F5FB',
+            100: '#EDEBF7',
+            400: '#8B87A3',
+          },
+          brand: {
+            400: '#A78BFA',
+            500: '#8B5CF6',
+            600: '#7C3AED',
+            700: '#6D28D9',
+          },
+          protein: '#34D399',
+          carbs: '#FBBF24',
+          fat: '#F472B6',
+        },
+        boxShadow: {
+          glow: '0 0 0 1px rgba(124,58,237,0.15), 0 8px 30px -8px rgba(124,58,237,0.45)',
+        }
+      }
     }
-  ]
+  };
+</script>
+
+<!-- ===================== Librería de escaneo de códigos de barras / QR ===================== -->
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" defer></script>
+
+<style>
+  html, body { -webkit-tap-highlight-color: transparent; overscroll-behavior-y: none; }
+  body { font-family: 'Inter', sans-serif; }
+  .font-display { font-family: 'Space Grotesk', sans-serif; }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+  ::-webkit-scrollbar { display: none; }
+  * { scrollbar-width: none; }
+
+  /* Respeta el notch / home indicator de iPhone en modo standalone */
+  .safe-top { padding-top: env(safe-area-inset-top); }
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+  .ring-progress { transition: stroke-dashoffset 0.7s cubic-bezier(.4,0,.2,1); transform: rotate(-90deg); transform-origin: 50% 50%; }
+
+  .sheet-enter { animation: sheetUp .28s cubic-bezier(.32,.72,0,1); }
+  @keyframes sheetUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+  .fade-enter { animation: fadeIn .2s ease-out; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+  .pop-enter { animation: pop .25s cubic-bezier(.34,1.56,.64,1); }
+  @keyframes pop { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: scale(1); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ring-progress, .sheet-enter, .fade-enter, .pop-enter { animation: none !important; transition: none !important; }
+  }
+
+  input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 999px; background: #8B5CF6; cursor: pointer; margin-top: -7px; box-shadow: 0 0 0 4px rgba(139,92,246,.25); }
+  input[type="range"] { -webkit-appearance: none; height: 4px; border-radius: 999px; background: #332D4A; }
+</style>
+</head>
+
+<body class="bg-mist-50 dark:bg-ink-900 text-ink-900 dark:text-mist-100 font-body min-h-screen transition-colors duration-300">
+
+<!-- ===================== BARRA SUPERIOR ===================== -->
+<header class="safe-top sticky top-0 z-30 bg-mist-50/80 dark:bg-ink-900/80 backdrop-blur-lg border-b border-ink-900/5 dark:border-mist-100/5">
+  <div class="max-w-lg md:max-w-2xl mx-auto px-5 pt-4 pb-3 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-brand-500">
+        <path d="M12 2 L14.2 9.5 L22 12 L14.2 14.5 L12 22 L9.8 14.5 L2 12 L9.8 9.5 Z" fill="currentColor"/>
+      </svg>
+      <h1 class="font-display font-bold text-lg tracking-tight">MagoFIT</h1>
+    </div>
+    <div class="flex items-center gap-1">
+      <button id="prevDayBtn" aria-label="Día anterior" class="w-9 h-9 grid place-items-center rounded-full active:bg-ink-900/5 dark:active:bg-mist-100/10">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button id="dateLabelBtn" class="font-mono text-xs px-2 py-1.5 rounded-full bg-ink-900/5 dark:bg-mist-100/10 min-w-[92px] text-center"></button>
+      <button id="nextDayBtn" aria-label="Día siguiente" class="w-9 h-9 grid place-items-center rounded-full active:bg-ink-900/5 dark:active:bg-mist-100/10">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <button id="settingsBtn" aria-label="Ajustes" class="w-9 h-9 grid place-items-center rounded-full active:bg-ink-900/5 dark:active:bg-mist-100/10 ml-1">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== CONTENIDO PRINCIPAL ===================== -->
+<main class="max-w-lg md:max-w-2xl mx-auto px-5 pb-32 pt-5">
+
+  <!-- HERO: anillo de calorías -->
+  <section class="rounded-3xl bg-white dark:bg-ink-800 shadow-glow p-6 flex flex-col items-center">
+    <div class="relative w-48 h-48">
+      <svg viewBox="0 0 160 160" class="w-48 h-48">
+        <circle cx="80" cy="80" r="70" stroke-width="12" fill="none" class="stroke-ink-900/5 dark:stroke-mist-100/10"/>
+        <circle id="calorieRing" cx="80" cy="80" r="70" stroke-width="12" fill="none" stroke-linecap="round"
+          class="ring-progress stroke-brand-500" stroke-dasharray="439.8" stroke-dashoffset="439.8"/>
+      </svg>
+      <div class="absolute inset-0 grid place-items-center flex-col text-center">
+        <div class="flex flex-col items-center">
+          <span id="kcalRemaining" class="font-display font-bold text-3xl">0</span>
+          <span class="text-[11px] uppercase tracking-wider text-mist-400 font-mono">kcal restantes</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center gap-6 mt-4 font-mono text-xs text-mist-400">
+      <span><span id="kcalConsumed" class="text-ink-900 dark:text-mist-100 font-semibold">0</span> consumidas</span>
+      <span class="w-1 h-1 rounded-full bg-mist-400/50"></span>
+      <span><span id="kcalGoal" class="text-ink-900 dark:text-mist-100 font-semibold">2000</span> meta</span>
+    </div>
+  </section>
+
+  <!-- MACROS -->
+  <section class="grid grid-cols-3 gap-3 mt-4">
+    <div class="rounded-2xl bg-white dark:bg-ink-800 p-3.5">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-semibold text-protein">Proteína</span>
+      </div>
+      <div class="h-1.5 rounded-full bg-ink-900/5 dark:bg-mist-100/10 overflow-hidden mb-2">
+        <div id="proteinBar" class="h-full bg-protein rounded-full transition-all duration-500" style="width:0%"></div>
+      </div>
+      <p class="font-mono text-sm"><span id="proteinConsumed">0</span><span class="text-mist-400">/<span id="proteinGoal">120</span>g</span></p>
+    </div>
+    <div class="rounded-2xl bg-white dark:bg-ink-800 p-3.5">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-semibold text-carbs">Carbos</span>
+      </div>
+      <div class="h-1.5 rounded-full bg-ink-900/5 dark:bg-mist-100/10 overflow-hidden mb-2">
+        <div id="carbsBar" class="h-full bg-carbs rounded-full transition-all duration-500" style="width:0%"></div>
+      </div>
+      <p class="font-mono text-sm"><span id="carbsConsumed">0</span><span class="text-mist-400">/<span id="carbsGoal">220</span>g</span></p>
+    </div>
+    <div class="rounded-2xl bg-white dark:bg-ink-800 p-3.5">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-semibold text-fat">Grasas</span>
+      </div>
+      <div class="h-1.5 rounded-full bg-ink-900/5 dark:bg-mist-100/10 overflow-hidden mb-2">
+        <div id="fatBar" class="h-full bg-fat rounded-full transition-all duration-500" style="width:0%"></div>
+      </div>
+      <p class="font-mono text-sm"><span id="fatConsumed">0</span><span class="text-mist-400">/<span id="fatGoal">65</span>g</span></p>
+    </div>
+  </section>
+
+  <!-- DIARIO DE COMIDAS -->
+  <section class="mt-6 space-y-4" id="mealsContainer">
+    <!-- Las secciones de comidas (Desayuno, Almuerzo, Cena, Snacks) se generan con JS -->
+  </section>
+
+</main>
+
+<!-- ===================== BOTÓN FLOTANTE: AGREGAR ALIMENTO ===================== -->
+<div class="fixed bottom-0 left-0 right-0 z-30 safe-bottom pointer-events-none">
+  <div class="max-w-lg md:max-w-2xl mx-auto px-5 pb-5 flex justify-center pointer-events-none">
+    <button id="fabAdd" class="pointer-events-auto flex items-center gap-2 bg-brand-600 hover:bg-brand-700 active:scale-95 transition-all text-white font-semibold px-6 py-3.5 rounded-full shadow-glow">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+      Agregar alimento
+    </button>
+  </div>
+</div>
+
+<!-- ===================== HOJA: ELEGIR MÉTODO PARA AGREGAR ===================== -->
+<div id="addSheetOverlay" class="hidden fixed inset-0 z-40 bg-black/50 fade-enter">
+  <div class="absolute bottom-0 left-0 right-0 bg-mist-50 dark:bg-ink-800 rounded-t-3xl safe-bottom sheet-enter">
+    <div class="max-w-lg md:max-w-2xl mx-auto p-5">
+      <div class="w-10 h-1 rounded-full bg-ink-900/15 dark:bg-mist-100/20 mx-auto mb-5"></div>
+      <h2 class="font-display font-bold text-lg mb-1">Agregar alimento</h2>
+      <p class="text-sm text-mist-400 mb-5">Elige cómo quieres registrar tu comida</p>
+
+      <button data-meal-target="" id="optPhoto" class="w-full flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-ink-700 mb-3 active:scale-[.98] transition-transform">
+        <div class="w-11 h-11 rounded-xl bg-brand-600/10 text-brand-500 grid place-items-center shrink-0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </div>
+        <div class="text-left">
+          <p class="font-semibold text-sm">Foto con IA</p>
+          <p class="text-xs text-mist-400">Toma una foto de tu plato y la IA estima calorías</p>
+        </div>
+      </button>
+
+      <button id="optBarcode" class="w-full flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-ink-700 mb-3 active:scale-[.98] transition-transform">
+        <div class="w-11 h-11 rounded-xl bg-protein/10 text-protein grid place-items-center shrink-0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5v14M8 5v14M12 5v14M17 5v14M21 5v14"/></svg>
+        </div>
+        <div class="text-left">
+          <p class="font-semibold text-sm">Escanear código de barras</p>
+          <p class="text-xs text-mist-400">Productos empaquetados vía Open Food Facts</p>
+        </div>
+      </button>
+
+      <button id="optManual" class="w-full flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-ink-700 mb-2 active:scale-[.98] transition-transform">
+        <div class="w-11 h-11 rounded-xl bg-carbs/10 text-carbs grid place-items-center shrink-0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="text-left">
+          <p class="font-semibold text-sm">Agregar manualmente</p>
+          <p class="text-xs text-mist-400">Escribe los datos nutricionales tú mismo</p>
+        </div>
+      </button>
+
+      <button id="cancelSheet" class="w-full text-center text-sm text-mist-400 font-medium py-3 mt-1">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Input oculto para capturar foto directo de la cámara del dispositivo -->
+<input type="file" id="cameraInput" accept="image/*" capture="environment" class="hidden">
+
+<!-- ===================== MODAL: SELECCIÓN DE COMIDA (antes de cada flujo) ===================== -->
+<div id="mealPickerOverlay" class="hidden fixed inset-0 z-40 bg-black/50 fade-enter grid place-items-center px-6">
+  <div class="bg-mist-50 dark:bg-ink-800 rounded-3xl p-5 w-full max-w-sm pop-enter">
+    <h3 class="font-display font-bold text-base mb-4">¿A qué comida pertenece?</h3>
+    <div class="grid grid-cols-2 gap-2.5" id="mealPickerOptions"></div>
+    <button id="mealPickerCancel" class="w-full text-center text-sm text-mist-400 font-medium py-3 mt-2">Cancelar</button>
+  </div>
+</div>
+
+<!-- ===================== MODAL: ANALIZANDO FOTO (loading) ===================== -->
+<div id="analyzingOverlay" class="hidden fixed inset-0 z-50 bg-black/70 grid place-items-center fade-enter">
+  <div class="bg-mist-50 dark:bg-ink-800 rounded-3xl p-8 flex flex-col items-center gap-4 pop-enter mx-6">
+    <svg class="animate-spin text-brand-500" width="36" height="36" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" class="opacity-20"/><path d="M12 2a10 10 0 0110 10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+    <p class="font-medium text-sm text-center" id="analyzingText">Analizando tu plato con IA...</p>
+  </div>
+</div>
+
+<!-- ===================== MODAL: ESCÁNER DE CÓDIGO DE BARRAS ===================== -->
+<div id="barcodeOverlay" class="hidden fixed inset-0 z-40 bg-black fade-enter">
+  <div class="safe-top flex items-center justify-between p-4">
+    <p class="text-white font-medium text-sm">Apunta al código de barras</p>
+    <button id="closeBarcodeBtn" class="w-9 h-9 grid place-items-center rounded-full bg-white/10 text-white">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div id="barcodeReader" class="w-full max-w-md mx-auto px-4"></div>
+  <p id="barcodeStatus" class="text-center text-white/60 text-xs mt-3 px-6"></p>
+</div>
+
+<!-- ===================== MODAL: REVISAR / EDITAR RESULTADO (foto IA o código de barras) ===================== -->
+<div id="reviewOverlay" class="hidden fixed inset-0 z-40 bg-black/50 fade-enter">
+  <div class="absolute bottom-0 left-0 right-0 bg-mist-50 dark:bg-ink-800 rounded-t-3xl safe-bottom sheet-enter max-h-[88vh] overflow-y-auto">
+    <div class="max-w-lg md:max-w-2xl mx-auto p-5">
+      <div class="w-10 h-1 rounded-full bg-ink-900/15 dark:bg-mist-100/20 mx-auto mb-5"></div>
+      <h2 class="font-display font-bold text-lg mb-4" id="reviewTitle">Confirmar alimento</h2>
+      <div id="reviewImageWrap" class="hidden mb-4 rounded-2xl overflow-hidden">
+        <img id="reviewImage" class="w-full h-40 object-cover" alt="Foto del plato">
+      </div>
+      <div id="reviewItemsList" class="space-y-3 mb-4"></div>
+      <button id="addReviewItemBtn" class="text-brand-500 text-sm font-semibold mb-5">+ Agregar otro alimento a la lista</button>
+
+      <div class="rounded-2xl bg-white dark:bg-ink-700 p-4 mb-5 flex justify-between items-center font-mono">
+        <span class="text-sm text-mist-400">Total estimado</span>
+        <span class="font-bold text-lg" id="reviewTotalKcal">0 kcal</span>
+      </div>
+
+      <button id="confirmAddBtn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 rounded-2xl mb-2">Agregar al diario</button>
+      <button id="cancelReviewBtn" class="w-full text-center text-sm text-mist-400 font-medium py-3">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Plantilla (template) para cada fila editable de alimento en la revisión -->
+<template id="reviewItemTemplate">
+  <div class="review-item rounded-2xl bg-white dark:bg-ink-700 p-3.5">
+    <div class="flex items-center justify-between gap-2 mb-2.5">
+      <input type="text" class="item-name flex-1 bg-transparent font-semibold text-sm outline-none" placeholder="Nombre del alimento">
+      <button class="item-remove w-7 h-7 shrink-0 grid place-items-center rounded-full bg-ink-900/5 dark:bg-mist-100/10 text-mist-400">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="grid grid-cols-4 gap-2 font-mono">
+      <label class="text-center">
+        <input type="number" class="item-kcal w-full bg-ink-900/5 dark:bg-mist-100/10 rounded-lg py-1.5 text-center text-xs" value="0">
+        <span class="block text-[10px] text-mist-400 mt-1">kcal</span>
+      </label>
+      <label class="text-center">
+        <input type="number" class="item-protein w-full bg-ink-900/5 dark:bg-mist-100/10 rounded-lg py-1.5 text-center text-xs" value="0">
+        <span class="block text-[10px] text-protein mt-1">prot g</span>
+      </label>
+      <label class="text-center">
+        <input type="number" class="item-carbs w-full bg-ink-900/5 dark:bg-mist-100/10 rounded-lg py-1.5 text-center text-xs" value="0">
+        <span class="block text-[10px] text-carbs mt-1">carb g</span>
+      </label>
+      <label class="text-center">
+        <input type="number" class="item-fat w-full bg-ink-900/5 dark:bg-mist-100/10 rounded-lg py-1.5 text-center text-xs" value="0">
+        <span class="block text-[10px] text-fat mt-1">grasa g</span>
+      </label>
+    </div>
+  </div>
+</template>
+
+<!-- ===================== MODAL: AJUSTES ===================== -->
+<div id="settingsOverlay" class="hidden fixed inset-0 z-40 bg-black/50 fade-enter">
+  <div class="absolute bottom-0 left-0 right-0 bg-mist-50 dark:bg-ink-800 rounded-t-3xl safe-bottom sheet-enter max-h-[90vh] overflow-y-auto">
+    <div class="max-w-lg md:max-w-2xl mx-auto p-5">
+      <div class="w-10 h-1 rounded-full bg-ink-900/15 dark:bg-mist-100/20 mx-auto mb-5"></div>
+      <h2 class="font-display font-bold text-lg mb-5">Ajustes</h2>
+
+      <div class="flex items-center justify-between mb-5 rounded-2xl bg-white dark:bg-ink-700 p-4">
+        <span class="text-sm font-medium">Tema oscuro</span>
+        <button id="themeToggle" class="w-12 h-7 rounded-full bg-ink-900/10 dark:bg-brand-600 relative transition-colors">
+          <span id="themeToggleDot" class="absolute top-1 left-1 w-5 h-5 rounded-full bg-white transition-transform dark:translate-x-5"></span>
+        </button>
+      </div>
+
+      <h3 class="text-xs uppercase tracking-wider text-mist-400 font-semibold mb-3 mt-6">Metas diarias</h3>
+      <div class="grid grid-cols-2 gap-3 mb-6">
+        <label class="block">
+          <span class="text-xs text-mist-400 mb-1 block">Calorías (kcal)</span>
+          <input id="settingKcalGoal" type="number" class="w-full bg-white dark:bg-ink-700 rounded-xl px-3 py-2.5 font-mono text-sm outline-none">
+        </label>
+        <label class="block">
+          <span class="text-xs text-protein mb-1 block">Proteína (g)</span>
+          <input id="settingProteinGoal" type="number" class="w-full bg-white dark:bg-ink-700 rounded-xl px-3 py-2.5 font-mono text-sm outline-none">
+        </label>
+        <label class="block">
+          <span class="text-xs text-carbs mb-1 block">Carbohidratos (g)</span>
+          <input id="settingCarbsGoal" type="number" class="w-full bg-white dark:bg-ink-700 rounded-xl px-3 py-2.5 font-mono text-sm outline-none">
+        </label>
+        <label class="block">
+          <span class="text-xs text-fat mb-1 block">Grasas (g)</span>
+          <input id="settingFatGoal" type="number" class="w-full bg-white dark:bg-ink-700 rounded-xl px-3 py-2.5 font-mono text-sm outline-none">
+        </label>
+      </div>
+
+      <h3 class="text-xs uppercase tracking-wider text-mist-400 font-semibold mb-3 mt-2">Inteligencia artificial (análisis de fotos)</h3>
+      <label class="block mb-3">
+        <span class="text-xs text-mist-400 mb-1 block">Proveedor</span>
+        <select id="settingProvider" class="w-full bg-white dark:bg-ink-700 rounded-xl px-3 py-2.5 text-sm outline-none">
+          <option value="openai">OpenAI (GPT-4o)</option>
+          <option value="gemini">Google Gemini (Vision)</option>
+        </select>
+      </label>
+      <label class="block mb-2">
+        <span class="text-xs text-mist-400 mb-1 block">Clave API de OpenAI</span>
+        <input id="settingOpenAIKey" type="password" placeholder="sk-..." class="w-full bg-white dark:bg-ink-700 rounded-xl px-3 py-2.5 font-mono text-xs outline-none">
+      </label>
+      <label class="block mb-2">
+        <span class="text-xs text-mist-400 mb-1 block">Clave API de Google Gemini</span>
+        <input id="settingGeminiKey" type="password" placeholder="AIza..." class="w-full bg-white dark:bg-ink-700 rounded-xl px-3 py-2.5 font-mono text-xs outline-none">
+      </label>
+      <p class="text-[11px] text-mist-400 leading-relaxed mb-6">
+        Tus claves se guardan solo en este dispositivo (localStorage) y se usan para llamar directamente a la API
+        desde el navegador. No se envían a ningún servidor de MagoFIT. Consulta la sección de seguridad en el
+        código fuente antes de usar esto en producción con muchos usuarios.
+      </p>
+
+      <button id="saveSettingsBtn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 rounded-2xl mb-2">Guardar ajustes</button>
+      <button id="closeSettingsBtn" class="w-full text-center text-sm text-mist-400 font-medium py-3">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast de notificación -->
+<div id="toast" class="hidden fixed bottom-24 left-1/2 -translate-x-1/2 z-50 bg-ink-900 dark:bg-mist-100 text-mist-50 dark:text-ink-900 text-sm font-medium px-4 py-2.5 rounded-full shadow-lg pop-enter"></div>
+
+<script>
+/* =========================================================================================
+   MAGOFIT — LÓGICA DE LA APLICACIÓN (JavaScript vanilla, sin frameworks)
+   =========================================================================================
+
+   ⚠️  DÓNDE COLOCAR TU CLAVE API (API KEY) ⚠️
+   -------------------------------------------
+   Esta app pide la clave de OpenAI o de Google Gemini en el modal de Ajustes (⚙️) y la
+   guarda en localStorage de tu propio dispositivo (ver función saveSettings()).
+   Si en cambio prefieres dejar la clave fija en el código (por ejemplo, para una app de
+   un solo usuario que solo tú vas a instalar), puedes definirla aquí abajo como valor por
+   defecto — pero recuerda que cualquier clave puesta en el HTML/JS es visible para quien
+   inspeccione el código fuente de la página, así que NUNCA lo hagas en una app pública:
+
+   const HARDCODED_OPENAI_KEY = "";  // <-- opcional: pega tu clave "sk-..." aquí
+   const HARDCODED_GEMINI_KEY = "";  // <-- opcional: pega tu clave "AIza..." aquí
+   ========================================================================================= */
+
+const HARDCODED_OPENAI_KEY = "";
+const HARDCODED_GEMINI_KEY = "";
+
+// ---------------------------------------------------------------------------------------
+// ESTADO Y PERSISTENCIA (localStorage)
+// ---------------------------------------------------------------------------------------
+const STORAGE_KEYS = { settings: "magofit_settings", days: "magofit_days" };
+
+const MEAL_TYPES = [
+  { id: "desayuno", label: "Desayuno", icon: "☀️" },
+  { id: "almuerzo", label: "Almuerzo", icon: "🍽️" },
+  { id: "cena", label: "Cena", icon: "🌙" },
+  { id: "snacks", label: "Snacks", icon: "🍎" },
+];
+
+function defaultSettings() {
+  return {
+    kcalGoal: 2000,
+    proteinGoal: 120,
+    carbsGoal: 220,
+    fatGoal: 65,
+    theme: "dark",
+    apiProvider: "openai",
+    openaiKey: HARDCODED_OPENAI_KEY || "",
+    geminiKey: HARDCODED_GEMINI_KEY || "",
+  };
 }
+
+function loadSettings() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.settings);
+    return raw ? { ...defaultSettings(), ...JSON.parse(raw) } : defaultSettings();
+  } catch (e) {
+    return defaultSettings();
+  }
+}
+
+function saveSettingsToStorage(s) {
+  localStorage.setItem(STORAGE_KEYS.settings, JSON.stringify(s));
+}
+
+function loadDays() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEYS.days);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveDaysToStorage(days) {
+  localStorage.setItem(STORAGE_KEYS.days, JSON.stringify(days));
+}
+
+let settings = loadSettings();
+let daysData = loadDays();
+let currentDate = new Date();
+
+function dateKey(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+function getCurrentDay() {
+  const key = dateKey(currentDate);
+  if (!daysData[key]) {
+    daysData[key] = { meals: { desayuno: [], almuerzo: [], cena: [], snacks: [] } };
+  }
+  return daysData[key];
+}
+
+function persistDays() { saveDaysToStorage(daysData); }
+
+// ---------------------------------------------------------------------------------------
+// RENDERIZADO
+// ---------------------------------------------------------------------------------------
+const $ = (sel) => document.querySelector(sel);
+const $$ = (sel) => document.querySelectorAll(sel);
+
+function formatDateLabel(d) {
+  const today = new Date();
+  const isToday = dateKey(d) === dateKey(today);
+  const yesterday = new Date(today); yesterday.setDate(today.getDate() - 1);
+  const isYesterday = dateKey(d) === dateKey(yesterday);
+  if (isToday) return "Hoy";
+  if (isYesterday) return "Ayer";
+  return d.toLocaleDateString("es-ES", { day: "2-digit", month: "short" });
+}
+
+function computeTotals(day) {
+  const totals = { kcal: 0, protein: 0, carbs: 0, fat: 0 };
+  Object.values(day.meals).forEach((items) => {
+    items.forEach((it) => {
+      totals.kcal += Number(it.kcal) || 0;
+      totals.protein += Number(it.protein) || 0;
+      totals.carbs += Number(it.carbs) || 0;
+      totals.fat += Number(it.fat) || 0;
+    });
+  });
+  return totals;
+}
+
+const RING_CIRCUMFERENCE = 2 * Math.PI * 70;
+
+function renderDashboard() {
+  $("#dateLabelBtn").textContent = formatDateLabel(currentDate);
+  const day = getCurrentDay();
+  const totals = computeTotals(day);
+  const remaining = Math.max(settings.kcalGoal - totals.kcal, 0);
+
+  $("#kcalRemaining").textContent = Math.round(remaining);
+  $("#kcalConsumed").textContent = Math.round(totals.kcal);
+  $("#kcalGoal").textContent = Math.round(settings.kcalGoal);
+
+  const pct = Math.min(totals.kcal / settings.kcalGoal, 1);
+  const offset = RING_CIRCUMFERENCE * (1 - pct);
+  $("#calorieRing").style.strokeDasharray = RING_CIRCUMFERENCE;
+  $("#calorieRing").style.strokeDashoffset = offset;
+  $("#calorieRing").classList.toggle("stroke-fat", totals.kcal > settings.kcalGoal);
+  $("#calorieRing").classList.toggle("stroke-brand-500", totals.kcal <= settings.kcalGoal);
+
+  setMacroBar("protein", totals.protein, settings.proteinGoal);
+  setMacroBar("carbs", totals.carbs, settings.carbsGoal);
+  setMacroBar("fat", totals.fat, settings.fatGoal);
+
+  renderMeals(day);
+}
+
+function setMacroBar(key, consumed, goal) {
+  $(`#${key}Consumed`).textContent = Math.round(consumed);
+  $(`#${key}Goal`).textContent = Math.round(goal);
+  const pct = Math.min((consumed / goal) * 100 || 0, 100);
+  $(`#${key}Bar`).style.width = pct + "%";
+}
+
+function renderMeals(day) {
+  const container = $("#mealsContainer");
+  container.innerHTML = "";
+  MEAL_TYPES.forEach((meal) => {
+    const items = day.meals[meal.id] || [];
+    const mealKcal = items.reduce((s, i) => s + (Number(i.kcal) || 0), 0);
+
+    const section = document.createElement("div");
+    section.className = "rounded-2xl bg-white dark:bg-ink-800 overflow-hidden";
+    section.innerHTML = `
+      <div class="flex items-center justify-between px-4 py-3.5">
+        <div class="flex items-center gap-2.5">
+          <span class="text-base">${meal.icon}</span>
+          <span class="font-semibold text-sm">${meal.label}</span>
+        </div>
+        <span class="font-mono text-xs text-mist-400">${Math.round(mealKcal)} kcal</span>
+      </div>
+      ${items.length ? `<div class="divide-y divide-ink-900/5 dark:divide-mist-100/5">` +
+        items.map((it) => `
+          <div class="flex items-center justify-between px-4 py-3 food-row" data-meal="${meal.id}" data-id="${it.id}">
+            <div class="min-w-0 pr-3">
+              <p class="text-sm font-medium truncate">${escapeHtml(it.name)}</p>
+              <p class="text-[11px] text-mist-400 font-mono">${Math.round(it.protein)}p · ${Math.round(it.carbs)}c · ${Math.round(it.fat)}g</p>
+            </div>
+            <div class="flex items-center gap-3 shrink-0">
+              <span class="font-mono text-sm">${Math.round(it.kcal)}</span>
+              <button class="delete-food-btn w-6 h-6 grid place-items-center rounded-full bg-ink-900/5 dark:bg-mist-100/10 text-mist-400">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg>
+              </button>
+            </div>
+          </div>
+        `).join("") + `</div>`
+        : `<div class="px-4 pb-4 text-xs text-mist-400">Sin registros todavía</div>`
+      }
+    `;
+    container.appendChild(section);
+  });
+
+  $$(".delete-food-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const row = e.target.closest(".food-row");
+      const meal = row.dataset.meal, id = row.dataset.id;
+      const day = getCurrentDay();
+      day.meals[meal] = day.meals[meal].filter((i) => i.id !== id);
+      persistDays();
+      renderDashboard();
+    });
+  });
+}
+
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str ?? "";
+  return div.innerHTML;
+}
+
+function showToast(msg) {
+  const t = $("#toast");
+  t.textContent = msg;
+  t.classList.remove("hidden");
+  clearTimeout(showToast._timer);
+  showToast._timer = setTimeout(() => t.classList.add("hidden"), 2600);
+}
+
+// ---------------------------------------------------------------------------------------
+// NAVEGACIÓN DE FECHAS
+// ---------------------------------------------------------------------------------------
+$("#prevDayBtn").addEventListener("click", () => {
+  currentDate.setDate(currentDate.getDate() - 1);
+  renderDashboard();
+});
+$("#nextDayBtn").addEventListener("click", () => {
+  const today = new Date();
+  if (dateKey(currentDate) >= dateKey(today)) return; // no ir al futuro
+  currentDate.setDate(currentDate.getDate() + 1);
+  renderDashboard();
+});
+
+// ---------------------------------------------------------------------------------------
+// HOJA "AGREGAR ALIMENTO" + SELECTOR DE COMIDA
+// ---------------------------------------------------------------------------------------
+let pendingFlow = null; // 'photo' | 'barcode' | 'manual'
+let pendingMeal = null;
+
+function suggestedMeal() {
+  const h = new Date().getHours();
+  if (h < 11) return "desayuno";
+  if (h < 16) return "almuerzo";
+  if (h < 21) return "cena";
+  return "snacks";
+}
+
+$("#fabAdd").addEventListener("click", () => toggleOverlay("#addSheetOverlay", true));
+$("#cancelSheet").addEventListener("click", () => toggleOverlay("#addSheetOverlay", false));
+$("#addSheetOverlay").addEventListener("click", (e) => { if (e.target.id === "addSheetOverlay") toggleOverlay("#addSheetOverlay", false); });
+
+function toggleOverlay(sel, show) {
+  const el = $(sel);
+  el.classList.toggle("hidden", !show);
+}
+
+$("#optPhoto").addEventListener("click", () => { pendingFlow = "photo"; toggleOverlay("#addSheetOverlay", false); openMealPicker(); });
+$("#optBarcode").addEventListener("click", () => { pendingFlow = "barcode"; toggleOverlay("#addSheetOverlay", false); openMealPicker(); });
+$("#optManual").addEventListener("click", () => { pendingFlow = "manual"; toggleOverlay("#addSheetOverlay", false); openMealPicker(); });
+
+function openMealPicker() {
+  const wrap = $("#mealPickerOptions");
+  wrap.innerHTML = "";
+  const suggested = suggestedMeal();
+  MEAL_TYPES.forEach((m) => {
+    const btn = document.createElement("button");
+    btn.className = `p-3.5 rounded-xl text-sm font-medium flex flex-col items-center gap-1 border-2 transition-colors ${m.id === suggested ? "border-brand-500 bg-brand-500/10" : "border-transparent bg-white dark:bg-ink-700"}`;
+    btn.innerHTML = `<span class="text-lg">${m.icon}</span>${m.label}`;
+    btn.addEventListener("click", () => {
+      pendingMeal = m.id;
+      toggleOverlay("#mealPickerOverlay", false);
+      launchPendingFlow();
+    });
+    wrap.appendChild(btn);
+  });
+  toggleOverlay("#mealPickerOverlay", true);
+}
+$("#mealPickerCancel").addEventListener("click", () => toggleOverlay("#mealPickerOverlay", false));
+$("#mealPickerOverlay").addEventListener("click", (e) => { if (e.target.id === "mealPickerOverlay") toggleOverlay("#mealPickerOverlay", false); });
+
+function launchPendingFlow() {
+  if (pendingFlow === "photo") $("#cameraInput").click();
+  else if (pendingFlow === "barcode") openBarcodeScanner();
+  else if (pendingFlow === "manual") openManualReview();
+}
+
+// ---------------------------------------------------------------------------------------
+// FLUJO 1: FOTO CON IA (OpenAI GPT-4o Vision / Google Gemini Vision)
+// ---------------------------------------------------------------------------------------
+$("#cameraInput").addEventListener("change", async (e) => {
+  const file = e.target.files[0];
+  e.target.value = ""; // permite volver a elegir la misma foto después
+  if (!file) return;
+
+  const base64 = await fileToBase64(file);
+  toggleOverlay("#analyzingOverlay", true);
+  $("#analyzingText").textContent = "Analizando tu plato con IA...";
+
+  try {
+    const result = await analyzePhotoWithAI(base64);
+    toggleOverlay("#analyzingOverlay", false);
+    openReviewModal({
+      title: "Resultado del análisis IA",
+      image: base64,
+      items: result.items,
+    });
+  } catch (err) {
+    toggleOverlay("#analyzingOverlay", false);
+    console.error(err);
+    showToast(err.message || "No se pudo analizar la foto. Revisa tu clave API en Ajustes.");
+  }
+});
+
+function fileToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result); // data:image/jpeg;base64,...
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+// Prompt compartido: le pedimos a la IA que devuelva SOLO JSON con los alimentos detectados.
+const VISION_PROMPT = `Eres un nutricionista experto. Analiza la foto de este plato de comida y
+identifica cada alimento visible, estimando su porción en gramos y su información nutricional.
+Responde ÚNICAMENTE con un JSON válido (sin texto adicional, sin markdown, sin backticks) con
+esta forma exacta:
+{"items":[{"name":"string en español","portion":"ej. 150 g","kcal":number,"protein":number,"carbs":number,"fat":number}]}
+Los valores kcal, protein, carbs y fat son números (protein/carbs/fat en gramos) para TODA la
+porción estimada, no por cada 100g. Sé realista con las porciones de un plato casero.`;
+
+async function analyzePhotoWithAI(base64Image) {
+  if (settings.apiProvider === "gemini") return analyzeWithGemini(base64Image);
+  return analyzeWithOpenAI(base64Image);
+}
+
+async function analyzeWithOpenAI(base64Image) {
+  if (!settings.openaiKey) throw new Error("Falta tu clave API de OpenAI. Agrégala en Ajustes ⚙️.");
+
+  // === Llamada a la API de OpenAI (modelo con visión) ===
+  const res = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${settings.openaiKey}`, // <-- tu clave API va aquí
+    },
+    body: JSON.stringify({
+      model: "gpt-4o",
+      max_tokens: 800,
+      messages: [
+        {
+          role: "user",
+          content: [
+            { type: "text", text: VISION_PROMPT },
+            { type: "image_url", image_url: { url: base64Image } },
+          ],
+        },
+      ],
+    }),
+  });
+
+  if (!res.ok) {
+    const errBody = await res.text();
+    throw new Error(`Error de OpenAI (${res.status}): revisa tu clave API o tu saldo. ${errBody.slice(0, 120)}`);
+  }
+  const data = await res.json();
+  const text = data.choices?.[0]?.message?.content || "";
+  return parseAiJson(text);
+}
+
+async function analyzeWithGemini(base64Image) {
+  if (!settings.geminiKey) throw new Error("Falta tu clave API de Google Gemini. Agrégala en Ajustes ⚙️.");
+
+  const [, mimeAndData] = base64Image.split("data:");
+  const [mime, b64] = mimeAndData.split(";base64,");
+
+  // === Llamada a la API de Google Gemini (modelo con visión) ===
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${settings.geminiKey}`, // <-- tu clave API va aquí
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [{
+          parts: [
+            { text: VISION_PROMPT },
+            { inline_data: { mime_type: mime, data: b64 } },
+          ],
+        }],
+      }),
+    }
+  );
+
+  if (!res.ok) {
+    const errBody = await res.text();
+    throw new Error(`Error de Gemini (${res.status}): revisa tu clave API. ${errBody.slice(0, 120)}`);
+  }
+  const data = await res.json();
+  const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+  return parseAiJson(text);
+}
+
+function parseAiJson(text) {
+  // Limpia posibles ```json ... ``` que el modelo agregue a pesar de la instrucción
+  const cleaned = text.replace(/```json/gi, "").replace(/```/g, "").trim();
+  const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
+  if (!jsonMatch) throw new Error("La IA no devolvió un resultado interpretable. Intenta con otra foto.");
+  const parsed = JSON.parse(jsonMatch[0]);
+  if (!parsed.items || !parsed.items.length) throw new Error("No se detectaron alimentos en la foto.");
+  return parsed;
+}
+
+// ---------------------------------------------------------------------------------------
+// FLUJO 2: ESCÁNER DE CÓDIGO DE BARRAS (html5-qrcode + Open Food Facts)
+// ---------------------------------------------------------------------------------------
+let html5QrCode = null;
+
+function openBarcodeScanner() {
+  toggleOverlay("#barcodeOverlay", true);
+  $("#barcodeStatus").textContent = "Iniciando cámara...";
+
+  if (typeof Html5Qrcode === "undefined") {
+    $("#barcodeStatus").textContent = "No se pudo cargar el lector. Revisa tu conexión a internet.";
+    return;
+  }
+
+  html5QrCode = new Html5Qrcode("barcodeReader");
+  const config = { fps: 10, qrbox: { width: 260, height: 160 } };
+
+  html5QrCode
+    .start({ facingMode: "environment" }, config, onBarcodeDetected, () => {})
+    .then(() => { $("#barcodeStatus").textContent = "Buscando código..."; })
+    .catch((err) => {
+      $("#barcodeStatus").textContent = "No se pudo acceder a la cámara. Revisa los permisos.";
+      console.error(err);
+    });
+}
+
+function stopBarcodeScanner() {
+  if (html5QrCode) {
+    html5QrCode.stop().then(() => html5QrCode.clear()).catch(() => {});
+    html5QrCode = null;
+  }
+}
+
+$("#closeBarcodeBtn").addEventListener("click", () => {
+  stopBarcodeScanner();
+  toggleOverlay("#barcodeOverlay", false);
+});
+
+let lastScannedCode = null;
+async function onBarcodeDetected(decodedText) {
+  if (decodedText === lastScannedCode) return; // evita duplicados del mismo frame
+  lastScannedCode = decodedText;
+  $("#barcodeStatus").textContent = `Código detectado: ${decodedText}. Buscando producto...`;
+
+  try {
+    // === Consulta pública a Open Food Facts (no requiere clave API) ===
+    const res = await fetch(`https://world.openfoodfacts.org/api/v2/product/${decodedText}.json`);
+    const data = await res.json();
+
+    if (data.status !== 1 || !data.product) {
+      $("#barcodeStatus").textContent = "Producto no encontrado en Open Food Facts. Intenta otro o agrégalo manualmente.";
+      lastScannedCode = null;
+      return;
+    }
+
+    const p = data.product;
+    const n = p.nutriments || {};
+    // Open Food Facts entrega valores por 100g; se ofrece un campo de gramos editable en la revisión.
+    const per100 = {
+      kcal: n["energy-kcal_100g"] ?? n["energy-kcal"] ?? 0,
+      protein: n["proteins_100g"] ?? 0,
+      carbs: n["carbohydrates_100g"] ?? 0,
+      fat: n["fat_100g"] ?? 0,
+    };
+
+    stopBarcodeScanner();
+    toggleOverlay("#barcodeOverlay", false);
+
+    openReviewModal({
+      title: "Producto escaneado",
+      items: [{
+        name: p.product_name || p.generic_name || "Producto sin nombre",
+        portion: "100 g",
+        kcal: per100.kcal,
+        protein: per100.protein,
+        carbs: per100.carbs,
+        fat: per100.fat,
+      }],
+    });
+  } catch (err) {
+    console.error(err);
+    $("#barcodeStatus").textContent = "Error al consultar Open Food Facts. Intenta de nuevo.";
+    lastScannedCode = null;
+  }
+}
+
+// ---------------------------------------------------------------------------------------
+// FLUJO 3: AGREGAR MANUALMENTE (reutiliza el modal de revisión con una fila vacía)
+// ---------------------------------------------------------------------------------------
+function openManualReview() {
+  openReviewModal({
+    title: "Agregar manualmente",
+    items: [{ name: "", portion: "", kcal: 0, protein: 0, carbs: 0, fat: 0 }],
+  });
+}
+
+// ---------------------------------------------------------------------------------------
+// MODAL DE REVISIÓN (compartido por los 3 flujos)
+// ---------------------------------------------------------------------------------------
+function openReviewModal({ title, image, items }) {
+  $("#reviewTitle").textContent = title;
+  const imgWrap = $("#reviewImageWrap");
+  if (image) {
+    $("#reviewImage").src = image;
+    imgWrap.classList.remove("hidden");
+  } else {
+    imgWrap.classList.add("hidden");
+  }
+
+  const list = $("#reviewItemsList");
+  list.innerHTML = "";
+  items.forEach((it) => addReviewRow(it));
+  updateReviewTotal();
+  toggleOverlay("#reviewOverlay", true);
+}
+
+function addReviewRow(item = {}) {
+  const tpl = $("#reviewItemTemplate").content.cloneNode(true);
+  const row = tpl.querySelector(".review-item");
+  row.querySelector(".item-name").value = item.name || "";
+  row.querySelector(".item-kcal").value = Math.round(item.kcal) || 0;
+  row.querySelector(".item-protein").value = Math.round(item.protein) || 0;
+  row.querySelector(".item-carbs").value = Math.round(item.carbs) || 0;
+  row.querySelector(".item-fat").value = Math.round(item.fat) || 0;
+
+  row.querySelectorAll("input").forEach((inp) => inp.addEventListener("input", updateReviewTotal));
+  row.querySelector(".item-remove").addEventListener("click", () => {
+    row.remove();
+    updateReviewTotal();
+  });
+
+  $("#reviewItemsList").appendChild(row);
+}
+
+$("#addReviewItemBtn").addEventListener("click", () => addReviewRow());
+
+function updateReviewTotal() {
+  let total = 0;
+  $$("#reviewItemsList .item-kcal").forEach((inp) => (total += Number(inp.value) || 0));
+  $("#reviewTotalKcal").textContent = `${Math.round(total)} kcal`;
+}
+
+$("#cancelReviewBtn").addEventListener("click", () => toggleOverlay("#reviewOverlay", false));
+
+$("#confirmAddBtn").addEventListener("click", () => {
+  const rows = $$("#reviewItemsList .review-item");
+  const day = getCurrentDay();
+  const meal = pendingMeal || suggestedMeal();
+  let added = 0;
+
+  rows.forEach((row) => {
+    const name = row.querySelector(".item-name").value.trim();
+    if (!name) return;
+    day.meals[meal].push({
+      id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random()),
+      name,
+      kcal: Number(row.querySelector(".item-kcal").value) || 0,
+      protein: Number(row.querySelector(".item-protein").value) || 0,
+      carbs: Number(row.querySelector(".item-carbs").value) || 0,
+      fat: Number(row.querySelector(".item-fat").value) || 0,
+      time: new Date().toISOString(),
+    });
+    added++;
+  });
+
+  if (!added) { showToast("Escribe al menos un nombre de alimento."); return; }
+
+  persistDays();
+  toggleOverlay("#reviewOverlay", false);
+  renderDashboard();
+  showToast(`Agregado a ${MEAL_TYPES.find((m) => m.id === meal).label} ✨`);
+});
+
+// ---------------------------------------------------------------------------------------
+// AJUSTES
+// ---------------------------------------------------------------------------------------
+$("#settingsBtn").addEventListener("click", () => {
+  $("#settingKcalGoal").value = settings.kcalGoal;
+  $("#settingProteinGoal").value = settings.proteinGoal;
+  $("#settingCarbsGoal").value = settings.carbsGoal;
+  $("#settingFatGoal").value = settings.fatGoal;
+  $("#settingProvider").value = settings.apiProvider;
+  $("#settingOpenAIKey").value = settings.openaiKey;
+  $("#settingGeminiKey").value = settings.geminiKey;
+  toggleOverlay("#settingsOverlay", true);
+});
+$("#closeSettingsBtn").addEventListener("click", () => toggleOverlay("#settingsOverlay", false));
+
+$("#saveSettingsBtn").addEventListener("click", () => {
+  settings.kcalGoal = Number($("#settingKcalGoal").value) || settings.kcalGoal;
+  settings.proteinGoal = Number($("#settingProteinGoal").value) || settings.proteinGoal;
+  settings.carbsGoal = Number($("#settingCarbsGoal").value) || settings.carbsGoal;
+  settings.fatGoal = Number($("#settingFatGoal").value) || settings.fatGoal;
+  settings.apiProvider = $("#settingProvider").value;
+  settings.openaiKey = $("#settingOpenAIKey").value.trim();
+  settings.geminiKey = $("#settingGeminiKey").value.trim();
+
+  saveSettingsToStorage(settings);
+  toggleOverlay("#settingsOverlay", false);
+  renderDashboard();
+  showToast("Ajustes guardados");
+});
+
+// Tema oscuro / claro
+function applyTheme() {
+  document.documentElement.classList.toggle("dark", settings.theme === "dark");
+}
+$("#themeToggle").addEventListener("click", () => {
+  settings.theme = settings.theme === "dark" ? "light" : "dark";
+  saveSettingsToStorage(settings);
+  applyTheme();
+});
+
+// ---------------------------------------------------------------------------------------
+// SERVICE WORKER (instalación / uso offline)
+// ---------------------------------------------------------------------------------------
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch((err) => console.warn("SW error:", err));
+  });
+}
+
+// ---------------------------------------------------------------------------------------
+// INICIO
+// ---------------------------------------------------------------------------------------
+applyTheme();
+renderDashboard();
+</script>
+</body>
+</html>
